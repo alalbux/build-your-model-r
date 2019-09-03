@@ -6,7 +6,8 @@ import Arrow from './Arrow'
 
 import {
   Flexbox,
-  Link
+  Link,
+  Text
 } from '../../components'
 
 const HomeContainer = styled.div`
@@ -24,12 +25,12 @@ const HomeImageContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-top: 150px;
+  padding-top: 120px;
 `
 
 const HomeTitleContainer = styled.div`
   position: absolute;
-  top: 10px;
+  top: -20px;
   left: 175px;
 `
 
@@ -57,12 +58,38 @@ const HomeStartContent = styled.div`
   text-align: center;
 `
 
-const HomeStartLink =styled(Link)`
+const HomeStartLink = styled(Link)`
   font-size: 16px;
   line-height: 25px;
   text-align: center;
   letter-spacing: 9.42222px;
   text-transform: uppercase;
+`
+
+const HomeFooter = styled.footer`
+  padding-top: 80px;
+`
+
+const HomeFooterTextContainer = styled.span`
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: 15px;
+  color: #AB1725;
+`
+
+const HomeFooterText = styled.span`
+  display: block;
+  color: #0F1C2D;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: 1.5px;
+`
+
+const HomeFooterTextValue = styled.span`
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 1.2;
 `
 
 const Home = () => (
@@ -71,7 +98,7 @@ const Home = () => (
       <HomeImageContainer>
         <HomeTitleContainer>
           <HomeTitle>
-            Build your 
+            Build your
             <HomeTitleModelName><HomeTitleCarName>Model</HomeTitleCarName> R</HomeTitleModelName>
           </HomeTitle>
         </HomeTitleContainer>
@@ -80,6 +107,22 @@ const Home = () => (
           <HomeStartLink>Begin <Arrow /></HomeStartLink>
         </HomeStartContent>
       </HomeImageContainer>
+      <HomeFooter>
+        <Flexbox horizontal justify='space-between'>
+          <HomeFooterTextContainer>
+            <HomeFooterTextValue>2.5</HomeFooterTextValue> s 
+            <HomeFooterText>From 0 to 100</HomeFooterText>
+          </HomeFooterTextContainer>
+          <HomeFooterTextContainer>
+            <HomeFooterTextValue>420</HomeFooterTextValue> mi 
+            <HomeFooterText>Miles range</HomeFooterText>
+          </HomeFooterTextContainer>
+          <HomeFooterTextContainer>
+            <HomeFooterTextValue>250</HomeFooterTextValue>mp/h 
+            <HomeFooterText>Max spreed</HomeFooterText>
+          </HomeFooterTextContainer>
+        </Flexbox>
+      </HomeFooter>
     </Flexbox>
   </HomeContainer>
 )

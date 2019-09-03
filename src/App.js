@@ -50,21 +50,8 @@ class App extends Component {
             <Cell size={[12, 12, 12]}>
               <Header />
             </Cell>
-            <Cell size={[12, 4, 4]}>
+            <Cell size={[12, 12, 12]}>
               <Home />
-            </Cell>
-            <Cell size={[12, 4, 4]}>
-              <div>
-                {error ? <p>{error.message}</p> : null}
-                {!isLoading ? (
-                  <div>
-                    <Text>{data.price}</Text>
-                    <Text>Text</Text>
-                  </div>
-                ) : (
-                    <h3>Loading...</h3>
-                  )}
-              </div>
             </Cell>
           </Grid>
         </Flexbox>

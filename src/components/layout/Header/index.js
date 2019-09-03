@@ -34,6 +34,10 @@ const HeaderMenuLink = styled(Link)`
   line-height: 1.5;
 `
 
+const HeaderMenuActive = styled(HeaderMenuLink)`
+  border-bottom: #AB1725 solid 2px;
+`
+
 const HeaderLogoContainer = styled.div`
   display: flex;
   align-items: center;
@@ -50,7 +54,7 @@ const Header = () => (
       <Cell size={[8]}>
         <HeaderMenuList>
           <HeaderMenuItem>
-            <HeaderMenuLink>Model R</HeaderMenuLink>
+            <HeaderMenuActive>Model R</HeaderMenuActive>
           </HeaderMenuItem>
           <HeaderMenuItem>
             <HeaderMenuLink>Model IQ</HeaderMenuLink>

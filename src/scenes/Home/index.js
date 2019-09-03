@@ -2,10 +2,11 @@ import React from 'react'
 import { oneOfType, node, func } from 'prop-types'
 import styled from 'styled-components'
 import Car from './car-home.png'
+import Arrow from './Arrow'
 
 import {
   Flexbox,
-  Text
+  Link
 } from '../../components'
 
 const HomeContainer = styled.div`
@@ -22,6 +23,7 @@ const HomeImageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   padding-top: 150px;
 `
 
@@ -49,7 +51,18 @@ const HomeTitleModelName = styled.span`
   font-size: 150px;
   font-weight: 500;
   text-transform: uppercase;
+`
 
+const HomeStartContent = styled.div`
+  text-align: center;
+`
+
+const HomeStartLink =styled(Link)`
+  font-size: 16px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 9.42222px;
+  text-transform: uppercase;
 `
 
 const Home = () => (
@@ -58,10 +71,14 @@ const Home = () => (
       <HomeImageContainer>
         <HomeTitleContainer>
           <HomeTitle>
-            Build your <HomeTitleModelName><HomeTitleCarName>Model</HomeTitleCarName> R</HomeTitleModelName>
+            Build your 
+            <HomeTitleModelName><HomeTitleCarName>Model</HomeTitleCarName> R</HomeTitleModelName>
           </HomeTitle>
         </HomeTitleContainer>
-        <img src={Car} alt='image car model R' />
+        <img src={Car} alt='' />
+        <HomeStartContent>
+          <HomeStartLink>Begin <Arrow /></HomeStartLink>
+        </HomeStartContent>
       </HomeImageContainer>
     </Flexbox>
   </HomeContainer>

@@ -48,8 +48,38 @@ const EngineRadio = styled(Radio)`
   flex-direction: row-reverse;
   margin: 24px 0;
   align-items: center;
+  width: 100%;
 `
 
+const EngineDetails = styled.ul`
+  display: flex;
+  justify-content: space-between;
+  color: #5B5B5B;
+  font-size: 22px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+`
+const EngineValue = styled.span`
+  color: #0F1C2D;
+  font-size: 22px;
+  font-weight: 500;
+  
+`
+const EngineName = styled.span`
+  color: #0F1C2D;
+  font-size: 34px;
+`
+const EngineItem = styled.li`
+  padding: 0 32px;
+  color: #5B5B5B;
+`
+
+
+const EngineType = styled.span`
+  color: #AB1725;
+`
 
 const Engine = () => (
   <EngineContainer>
@@ -65,9 +95,45 @@ const Engine = () => (
         </EngineTitle>
         <form>
           <Flexbox vertical>
-            <EngineRadio name='engine' defaultChecked>75P 75kWh 275 miles range</EngineRadio>
-            <EngineRadio name='engine'>100s 100kWh 355 miles range</EngineRadio>
-            <EngineRadio name='engine'>125B 125kWh 420 miles range</EngineRadio>
+            <EngineRadio name='engine' defaultChecked>
+              <EngineDetails>
+                <EngineItem>
+                  <EngineName>75<EngineType>P</EngineType></EngineName>
+                </EngineItem>
+                <EngineItem>
+                  <EngineValue>75</EngineValue>kWh
+                </EngineItem>
+                <EngineItem>
+                  <EngineValue>275</EngineValue> miles range
+                </EngineItem>
+              </EngineDetails>
+            </EngineRadio>
+            <EngineRadio name='engine'>
+              <EngineDetails>
+                <EngineItem>
+                  <EngineName>100<EngineType>S</EngineType></EngineName>
+                </EngineItem>
+                <EngineItem>
+                  <EngineValue>100</EngineValue>kWh
+                </EngineItem>
+                <EngineItem>
+                  <EngineValue>355</EngineValue> miles range
+                </EngineItem>
+              </EngineDetails>
+            </EngineRadio>
+            <EngineRadio name='engine'>
+              <EngineDetails>
+                <EngineItem>
+                  <EngineName>125<EngineType>B</EngineType></EngineName>
+                </EngineItem>
+                <EngineItem>
+                  <EngineValue>125</EngineValue>kWh
+                </EngineItem>
+                <EngineItem>
+                  <EngineValue>420</EngineValue> miles range
+                </EngineItem>
+              </EngineDetails>
+            </EngineRadio>
           </Flexbox>
         </form>
       </EngineContent>

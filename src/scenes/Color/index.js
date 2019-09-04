@@ -1,13 +1,16 @@
 import React from 'react'
 import { oneOfType, node, func } from 'prop-types'
 import styled from 'styled-components'
-// import Color75P from './images/1.png'
-// import Color100s from './images/2.png'
-// import Color125b from './images/3.png'
+import CarRed from './images/4.png'
+import CarBlue from './images/5.png'
+import CarGrey from './images/6.png'
+import BlueOption from './images/dot-blue.png'
+import Greyption from './images/dot-grey.png'
+import RedOption from './images/dot-red.png'
 
 import {
   Flexbox,
-  Link
+  Radio
 } from '../../components'
 
 const ColorContainer = styled.div`
@@ -41,16 +44,36 @@ const ColorTitle = styled.h1`
   line-height: 1.2;
 `
 
+
+const EngineRadio = styled(Radio)`
+  display: flex;
+`
+
 const Color = () => (
   <ColorContainer>
     <Flexbox horizontal justify='center'>
       <ColorImageContainer>
-        image
+        <img src={CarRed} alt='' />
+        <img src={CarBlue} alt='' />
+        <img src={CarGrey} alt='' />
       </ColorImageContainer>
       <ColorContent>
         <ColorTitle>
           Color
         </ColorTitle>
+        <form>
+          <Flexbox horizontal>
+            <EngineRadio name='engine'>
+              <img src={RedOption} alt='' />
+            </EngineRadio>
+            <EngineRadio name='engine' defaultChecked>
+              <img src={BlueOption} alt='' />
+            </EngineRadio>
+            <EngineRadio name='engine'>
+              <img src={Greyption} alt='' />
+            </EngineRadio>
+          </Flexbox>
+        </form>
       </ColorContent>
     </Flexbox>
   </ColorContainer>

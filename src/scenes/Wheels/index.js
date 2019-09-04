@@ -1,13 +1,13 @@
 import React from 'react'
 import { oneOfType, node, func } from 'prop-types'
 import styled from 'styled-components'
-// import Wheels75P from './images/1.png'
-// import Wheels100s from './images/2.png'
-// import Wheels125b from './images/3.png'
+import Wheels1 from './images/7.png'
+import Wheels2 from './images/8.png'
+import Wheels3 from './images/9.png'
 
 import {
   Flexbox,
-  Link
+  Radio
 } from '../../components'
 
 const WheelsContainer = styled.div`
@@ -25,13 +25,12 @@ const WheelsImageContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
   padding-top: 120px;
 `
 
 const WheelsContent = styled.div`
-  width: 50%;
-  background: #000;
+  width: 100%;
 `
 
 const WheelsTitle = styled.h1`
@@ -41,16 +40,32 @@ const WheelsTitle = styled.h1`
   line-height: 1.2;
 `
 
+const WheelsRadio = styled(Radio)`
+  display: flex;
+`
+
 const Wheels = () => (
   <WheelsContainer>
     <Flexbox horizontal justify='center'>
-      <WheelsImageContainer>
-        image
-      </WheelsImageContainer>
       <WheelsContent>
         <WheelsTitle>
           Wheels
-          </WheelsTitle>
+        </WheelsTitle>
+        <WheelsImageContainer>
+          <form>
+            <Flexbox horizontal>
+              <WheelsRadio name='wheels'>
+                <img src={Wheels1} alt='' />
+              </WheelsRadio>
+              <WheelsRadio name='wheels' defaultChecked>
+                <img src={Wheels2} alt='' />
+              </WheelsRadio>
+              <WheelsRadio name='wheels'>
+                <img src={Wheels3} alt='' />
+              </WheelsRadio>
+            </Flexbox>
+          </form>
+        </WheelsImageContainer>
       </WheelsContent>
     </Flexbox>
   </WheelsContainer>

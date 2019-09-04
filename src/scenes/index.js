@@ -1,1 +1,5 @@
 export { default as Home } from './Home/'
+export { default as Engine } from './Engine/'
+export { default as Color } from './Color/'
+export { default as Wheels } from './Wheels/'
+export { default as ResultBuild } from './ResultBuild/'

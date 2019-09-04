@@ -34,7 +34,6 @@ const ColorImageContainer = styled.div`
 
 const ColorContent = styled.div`
   width: 50%;
-  background: #000;
 `
 
 const ColorTitle = styled.h1`
@@ -43,7 +42,6 @@ const ColorTitle = styled.h1`
   font-weight: 300;
   line-height: 1.2;
 `
-
 
 const EngineRadio = styled(Radio)`
   display: flex;

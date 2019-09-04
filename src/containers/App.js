@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
-import { addItem } from '../actions'
+// import { addItem } from '../actions'
 import {
   Flexbox,
   Header,
   Page,
   Grid,
-  Cell,
-  Text
+  Cell
 } from '../components'
 import {
   Home,

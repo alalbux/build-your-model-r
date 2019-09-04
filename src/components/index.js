@@ -6,3 +6,5 @@ export { default as Page } from './layout/Page'
 
 export { default as Text } from './content/Text'
 export { default as Link } from './content/Link'
+
+export { default as Radio } from './form/Radio'

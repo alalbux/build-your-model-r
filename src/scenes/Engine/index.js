@@ -7,7 +7,7 @@ import Engine125b from './images/3.png'
 
 import {
   Flexbox,
-  Link
+  Radio
 } from '../../components'
 
 const EngineContainer = styled.div`
@@ -31,7 +31,6 @@ const EngineImageContainer = styled.div`
 
 const EngineContent = styled.div`
   width: 50%;
-  background: #000;
 `
 
 const EngineTitle = styled.h1`
@@ -40,6 +39,17 @@ const EngineTitle = styled.h1`
   font-weight: 300;
   line-height: 1.2;
 `
+
+const EngineRadio = styled(Radio)`
+  background: #F7F9FA;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  flex-direction: row-reverse;
+  margin: 24px 0;
+  align-items: center;
+`
+
 
 const Engine = () => (
   <EngineContainer>
@@ -52,7 +62,14 @@ const Engine = () => (
       <EngineContent>
         <EngineTitle>
           Engine
-          </EngineTitle>
+        </EngineTitle>
+        <form>
+          <Flexbox vertical>
+            <EngineRadio name='engine' defaultChecked>75P 75kWh 275 miles range</EngineRadio>
+            <EngineRadio name='engine'>100s 100kWh 355 miles range</EngineRadio>
+            <EngineRadio name='engine'>125B 125kWh 420 miles range</EngineRadio>
+          </Flexbox>
+        </form>
       </EngineContent>
     </Flexbox>
   </EngineContainer>

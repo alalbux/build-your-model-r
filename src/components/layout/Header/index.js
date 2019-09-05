@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import Logo from './Logo'
 
 import Link from '../../content/Link'
-import Flexbox from '../Flexbox';
+import Flexbox from '../Flexbox'
 
 const HeaderContainer = styled.header`
   padding-bottom: 32px;

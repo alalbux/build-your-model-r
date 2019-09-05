@@ -6,8 +6,7 @@ import styled from 'styled-components'
 // import ResultBuild125b from './images/3.png'
 
 import {
-  Flexbox,
-  Link
+  Flexbox
 } from '../../components'
 
 const ResultBuildContainer = styled.div`
@@ -52,7 +51,7 @@ const ResultBuild = () => (
       <ResultBuildContent>
         <ResultBuildTitle>
           ResultBuild
-          </ResultBuildTitle>
+        </ResultBuildTitle>
       </ResultBuildContent>
     </Flexbox>
   </ResultBuildContainer>

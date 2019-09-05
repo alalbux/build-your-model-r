@@ -49,7 +49,7 @@ Flexbox.propTypes = {
   middle: bool,
   end: bool,
   spacing: oneOf(['around', 'between']),
-  colSize: string,
+  colSize: string
 }
 
 Flexbox.displayName = 'Flexbox'

@@ -6,8 +6,7 @@ import Arrow from './Arrow'
 
 import {
   Flexbox,
-  Link,
-  Text
+  Link
 } from '../../components'
 
 const HomeContainer = styled.div`
@@ -110,15 +109,15 @@ const Home = () => (
       <HomeFooter>
         <Flexbox horizontal justify='space-between'>
           <HomeFooterTextContainer>
-            <HomeFooterTextValue>2.5</HomeFooterTextValue> s 
+            <HomeFooterTextValue>2.5</HomeFooterTextValue> s
             <HomeFooterText>From 0 to 100</HomeFooterText>
           </HomeFooterTextContainer>
           <HomeFooterTextContainer>
-            <HomeFooterTextValue>420</HomeFooterTextValue> mi 
+            <HomeFooterTextValue>420</HomeFooterTextValue> mi
             <HomeFooterText>Miles range</HomeFooterText>
           </HomeFooterTextContainer>
           <HomeFooterTextContainer>
-            <HomeFooterTextValue>250</HomeFooterTextValue>mp/h 
+            <HomeFooterTextValue>250</HomeFooterTextValue>mp/h
             <HomeFooterText>Max spreed</HomeFooterText>
           </HomeFooterTextContainer>
         </Flexbox>

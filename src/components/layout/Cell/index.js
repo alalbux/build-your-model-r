@@ -18,7 +18,7 @@ Cell.propTypes = {
 }
 
 Cell.defaultProps = {
-  size: [1,2,3,4,6,12]
+  size: [1, 2, 3, 4, 6, 12]
 }
 
 Cell.displayName = 'Cell'

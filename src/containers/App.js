@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 // import { addItem } from '../actions'
 import {
   Flexbox,
+  Footer,
   Header,
   Page,
   Grid,
@@ -17,9 +18,8 @@ import {
 import { connect } from 'react-redux'
 import { fetchCarIfNeeded } from '../actions'
 
-
 class App extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {
       data: {},
@@ -30,13 +30,12 @@ class App extends Component {
     // this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  componentDidMount() {
-    const { dispatch } = this.props
+  componentDidMount () {
+    const { dispatch } = this.props // eslint-disable-line react/prop-types
     dispatch(fetchCarIfNeeded())
   }
 
-
-  render() {
+  render () {
     // const {
     //   isLoading,
     //   data,
@@ -49,21 +48,24 @@ class App extends Component {
           <Grid>
             <Cell size={[12, 12, 12]}>
               <Header />
-            </Cell>
-            <Cell size={[12, 12, 12]}>
-              <Home />
-            </Cell>
-            <Cell size={[12, 12, 12]}>
-              <Engine />
-            </Cell>
-            <Cell size={[12, 12, 12]}>
-              <Color />
-            </Cell>
-            <Cell size={[12, 12, 12]}>
-              <Wheels />
-            </Cell>
-            <Cell size={[12, 12, 12]}>
-              <ResultBuild />
+              <Grid>
+                <Cell size={[12, 12, 12]}>
+                  <Home />
+                </Cell>
+                <Cell size={[12, 12, 12]}>
+                  <Engine />
+                </Cell>
+                <Cell size={[12, 12, 12]}>
+                  <Color />
+                </Cell>
+                <Cell size={[12, 12, 12]}>
+                  <Wheels />
+                </Cell>
+                <Cell size={[12, 12, 12]}>
+                  <ResultBuild />
+                </Cell>
+              </Grid>
+              <Footer />
             </Cell>
           </Grid>
         </Flexbox>

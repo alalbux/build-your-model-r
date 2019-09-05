@@ -76,7 +76,6 @@ const EngineItem = styled.li`
   color: #5B5B5B;
 `
 
-
 const EngineType = styled.span`
   color: #AB1725;
 `

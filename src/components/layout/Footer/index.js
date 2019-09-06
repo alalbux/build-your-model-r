@@ -4,7 +4,8 @@ import styled from 'styled-components'
 import {
   Flexbox,
   Text
-} from '../..'
+} from '../../'
+import Arrow from './Arrow'
 
 const FooterContainer = styled.footer`
   position: fixed;
@@ -13,57 +14,78 @@ const FooterContainer = styled.footer`
   left: 0;
   padding-bottom: 32px;
   background: #ffffff;
-  color: #007A8D;
+  color: #0F1C2D;
+  font-weight: 300;
+  font-size: 18px;
   width: 100%;
   margin: 0 auto;
-  padding: 16px 0;
+  padding: 16px;
+  box-sizing: border-box;
   box-shadow: inset 0px 8px 20px 0px rgba(0,0,0,0.08);
 `
 
 const FooterCalculateAmount = styled.div`
-  background: red;
+  font-weight: 600;
+  font-size: 16px;
+  color: #5B5B5B;
+`
+
+const FooterAmount = styled.div`
+  font-weight: 300;
+  font-size: 32px;
+  color: #AB1725;
 `
 
 const FooterCarModel = styled.div`
-  background: green;
+  font-weight: normal;
 `
 
 const FooterEngine = styled.div`
-  background: blue;
+  font-weight: 500;
+  font-size: 18px;
+`
+
+const FooterEngineType = styled.span`
+  color: #AB1725;
 `
 
 const FooterColor = styled.div`
-  background: grey;
+  background: none;
 `
 
 const FooterWheels = styled.div`
-  background: cyan;
+  background: none;
 `
 
 const FooterNextStep = styled.div`
-  background: purple;
+  text-align: center;
+`
+
+const FooterNextStepLink = styled.a`
+  font-size: 22px;
 `
 
 const Footer = () => (
   <FooterContainer>
-    <Flexbox horizontal justify='space-between'>
+    <Flexbox horizontal middle justify='space-between'>
       <FooterCalculateAmount>
-        <Text>Total $63.000</Text>
+        Total 
+        <FooterAmount>$63.000</FooterAmount>
       </FooterCalculateAmount>
       <FooterCarModel>
-        <Text>Model R</Text>
+        Model R
       </FooterCarModel>
       <FooterEngine>
-        <Text>75P</Text>
+        75<FooterEngineType>P</FooterEngineType>
       </FooterEngine>
       <FooterColor>
-        <Text>Red</Text>
+        Red
       </FooterColor>
       <FooterWheels>
         <Text>Rodinha</Text>
       </FooterWheels>
       <FooterNextStep>
-        <Text>Next</Text>
+        <FooterNextStepLink href="#">next <Arrow /></FooterNextStepLink>
       </FooterNextStep>
     </Flexbox>
   </FooterContainer>

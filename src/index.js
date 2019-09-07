@@ -4,6 +4,7 @@ import { createStore, applyMiddleware, compose } from 'redux'
 import { Provider } from 'react-redux'
 import thunkMiddleware from 'redux-thunk'
 import WebFont from 'webfontloader'
+import { loadState, saveState } from './localStorage'
 
 import * as serviceWorker from './serviceWorker'
 
@@ -14,6 +15,8 @@ import './index.css'
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
+const persistedState = loadState()
+
 const store = createStore(
   reducer,
   composeEnhancers(
@@ -22,6 +25,10 @@ const store = createStore(
     )
   )
 )
+
+store.subscribe(() => {
+  saveState(store.getState())
+})
 
 WebFont.load({
   google: {

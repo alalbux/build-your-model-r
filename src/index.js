@@ -1,34 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { createStore, applyMiddleware, compose } from 'redux'
-import { Provider } from 'react-redux'
-import thunkMiddleware from 'redux-thunk'
 import WebFont from 'webfontloader'
-import { loadState, saveState } from './localStorage'
+import configureStore from './configureStore'
 
 import * as serviceWorker from './serviceWorker'
 
-import reducer from './reducers'
-import App from './containers/App'
+import Root from './Root'
 import './index.css'
 
-
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
-
-const persistedState = loadState()
-
-const store = createStore(
-  reducer,
-  composeEnhancers(
-    applyMiddleware(
-      thunkMiddleware
-    )
-  )
-)
-
-store.subscribe(() => {
-  saveState(store.getState())
-})
+const store = configureStore()
 
 WebFont.load({
   google: {
@@ -40,9 +20,7 @@ WebFont.load({
 })
 
 ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  <Root store={store} />,
   document.getElementById('root')
 )
 

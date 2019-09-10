@@ -6,7 +6,6 @@ import configureStore from './configureStore'
 import * as serviceWorker from './serviceWorker'
 
 import Root from './Root'
-import './index.css'
 
 const store = configureStore()
 

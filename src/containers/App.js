@@ -14,7 +14,7 @@ import {
   Color,
   Wheels,
   ResultBuild
-} from '../scenes'
+} from '.'
 import { connect } from 'react-redux'
 import { fetchCarIfNeeded } from '../actions'
 
